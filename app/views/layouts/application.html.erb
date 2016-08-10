@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+   <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Interative ", '#', id: "logo" %>
+        <div class="registro">
+       <a href="http://localhost:3000/users/sign_up" class="btn btn-success" role="button">registate</a>
+        
+
+        <nav>
+          <ul class="nav navbar-nav navbar-right class">
+
+            
+            
+            <li><%= link_to "Bienvenida",  bienvenida_path %></li>
+            <li><%= link_to 'Signup', new_user_registration_path %></li>
+
+             <% if user_signed_in? %>
+            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+            <% else %>
+            <li><%= link_to "Log in", new_user_session_path %></li>
+            <%end%>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+ 
+    
+  </body>
+</html>

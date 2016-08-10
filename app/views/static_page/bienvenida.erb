@@ -1,0 +1,89 @@
+
+<center><h1>WELCOME</h1></center>
+<p>Aprende sobre comunicación y medios sociales en nuestro curso: Estrategias Digitales y Marketing Online . Las redes sociales en Internet han ganado su lugar de una manera vertiginosa convirtiéndose en promisorios negocios para empresas, artistas, marcas, freelance y sobretodo en lugares para encuentros humanos.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 15%;
+      margin: auto;
+      padding-top: 50px;
+
+  }
+  h1{
+  color:  #2A5D5F;
+  font-family: Georgia, Cambria, Times, "Times New Roman";
+  font-weight: bold;
+  padding-top: 38px;
+ 
+}
+p{
+    font-family: cursive;
+	padding-top: 20px;
+	padding-bottom: 350px;
+	padding-right: 600px;
+	line-height: 1; 
+	font-size: 1.4em 
+
+}
+.navbar{
+background-color: #749AD7;
+
+}
+</style>
+
+</head>
+<body background="http://wallpapercave.com/wp/wTqtbNE.jpg">
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+      <%= image_tag("fot/index.png")%></div>
+
+      <div class="item">
+        <%= image_tag("fot/youtube.jpg")%>
+      </div>
+    
+      <div class="item">
+        <%= image_tag("fot/index.png")%>
+      </div>
+
+      <div class="item">
+       <%= image_tag("fot/youtube.jpg")%>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+
