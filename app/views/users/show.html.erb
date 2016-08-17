@@ -1,4 +1,5 @@
 
+  <div class="container">
    <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <%= link_to "Interative", '#', id: "logo" %>
@@ -16,10 +17,11 @@
             <%end%>
           </ul>
         </nav>
+         <%= yield %>
       </div>
     </header>
-    <div class="container">
-      <%= yield %>
+    
+     
     </div>
 <h1>VISTA DEL USUARIO </h1>
 
@@ -41,18 +43,18 @@
     <!-- Wrapper for slides -->
     <center><div class="carousel-inner" role="listbox">
       <div class="item active">
-      <%= image_tag("fot/1.jpg")%></div>
+      <%= image_tag("fot/1.jpg", width:"500px", height:"500px")%></div>
 
       <div class="item">
-        <%= image_tag("fot/2.jpg")%>
+        <%= image_tag("fot/2.jpg", width:"300px", height:"300px")%>
       </div>
     
       <div class="item">
-        <%= image_tag("fot/3.jpg")%>
+        <%= image_tag("fot/3.jpg", width:"500px", height:"500px")%>
       </div>
 
       <div class="item">
-       <%= image_tag("fot/index.png")%>
+       <%= image_tag("fot/index.png", width:"500px", height:"500px")%>
       </div>
     </div></center>
 
@@ -69,9 +71,21 @@
 </div>
  
 </body>
+  
 
+    <%= form_for :article, url: test_path do |f| %>
+       
+      <%= form_for :post do |f| %>
+            
+        <p>
+          <%= f.label :text %><br>
+          <%= f.text_area :text %>
+        </p>
+       
+        <p>
+          <%= f.submit %>
+        </p>
+    <% end %>
 
-
-
- 
+ <% end %>
 
